@@ -1,16 +1,25 @@
-let arr = ['arun', 10, 500, "prasad", "C", "300"]
+let arr = ['arun', 10, 500, "prasad", "C", "300"];
 
-let numbers = [];
 let strings = [];
+let numbers = [];
+let characters = [];
 
-for(let i = 0; i<arr.length; i++){
-    if(typeof arr[i]=== "number"){
-        numbers.push(arr[i])
+for(let i =0; i< arr.length; i++){
+    let items = arr[i];
+
+    if( typeof items === "number"){
+        numbers.push(items);
     }
-    else{
-        strings.push(arr[i])
+    else if(typeof items === "string"){
+        if(items.length === 1){
+            characters.push(items)
+        }
+        else{
+            strings.push(items)
+        }
     }
 }
 
-console.log(numbers);
-console.log(strings);
+console.log(strings)
+console.log(numbers)
+console.log(characters)
